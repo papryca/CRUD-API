@@ -58,6 +58,8 @@ export class UserController {
           const user = this.userStorage.update(args[0], data);
           return this.writeResponse(resp, 200, user);
         }
+
+        return this.writeResponse(resp, 400, { message: 'Bad Request' });
       } catch (e) {
         return this.writeResponse(resp, 400, { message: 'Bad Request' });
       }
