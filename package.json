@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write .",
     "start:dev": "cross-env NODE_ENV=development ts-node-dev src/app.ts",
-    "start:prod": "cross-env NODE_ENV=production node scr/app.js"
+    "start:prod": "tsc | node ./dist/app.js"
   },
   "author": "Inesa Smarhunova",
   "license": "ISC",
